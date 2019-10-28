@@ -1,14 +1,14 @@
 # ATTiny85_Pong
 
-A modification of the classic game "Pong" with some additional features to run on the ATTiny85 using the SSD1306 Library.
+A modification of the classic game "Pong" with some additional features to run on the ATTiny85 using the SSD1306 Library. Running on an ATTiny85-20xx. OLED runs down to 2.2v without much error, and microcontroller can go lower than the rated 2.7v to 2.2v before running into OLED brightness issues.
 
 Wiring of the ATTiny is as follows:
 ```
-            _____
- NC (RST) -|o    |- 3v-5v DC
-SCL(OLED) -|     |- Button Voltage Divider (A1)
-SCK(OLED) -|     |- LED1 
-      GND -|_____|- LED0
+               _____
+ NC (RST)[1] -|o    |- [5]3v-5v DC
+SDA(OLED)[2] -|     |- [6]Button Voltage Divider (A1)
+SCK(OLED)[3] -|     |- [7]LED1 (Shoot)
+      GND[4] -|_____|- [8]LED0 (Spike)
 
 ```
 And the voltage divider I used is as follows:
@@ -77,7 +77,7 @@ I used an Arduino Uno to upload the sketch with this config as well as a 10uF ca
       GND -|_____|- D11
 
 ```
-The two pins (pin 7&6 where the OLED i2c com pins are) can be left connected.
+The two pins (pin 2&3 where the OLED i2c com pins are) can be left connected.
 Uploaded using ATTiny85 8MHz internal with Arduino as ISP.
 Additional board manager used: 
 https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json
