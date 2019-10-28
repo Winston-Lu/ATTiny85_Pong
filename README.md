@@ -13,15 +13,12 @@ SCK(OLED)[3] -|     |- [7]LED1 (Shoot)
 ```
 And the voltage divider I used is as follows:
 ```
-VCC __10k_______ 10k_________10k_________10k_____
+VCC __10k_______ 10k_________10k_________10k__________10k_____GND
             |           |           |           |
           Button      Button      Button      Button
-A1 _________|___________|___________|___________|
- |
-10k
- |
-GND
+A1 _________|___________|___________|___________|_____10k_____GND
 ```
+Note, this does constantly drain power even when not pressed, but at 0.1mA, which is
 
 In order to save on IO pins, an analog voltage divider has been used. The values set in the code were tested at 5v USB, thus values many change if a different voltage source is used. Uncomment `#define getAnalogStrength` in order to recalibrate the analogRead values; see under Customization for further details.
 
@@ -85,6 +82,12 @@ https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/packa
 Library used can be searched for in the library browser under "ssd1306" by Alexey Dynda, which can also be downloaded here:
 https://github.com/lexus2k/ssd1306
 
+
+# Power Usage:
+On average at 3v:
+  Startup Title Screen: 2.1-2.5mA
+  Game (depending on LED's): 0.63-0.83mA 
+  End Game Screen: 1.1mA
 
 # Modification and Usage
 Feel free to modify or use any of this code for your own purposes. See LICENSE for details
