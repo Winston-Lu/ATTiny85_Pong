@@ -16,9 +16,10 @@ And the voltage divider I used is as follows:
 VCC __10k_______ 10k_________10k_________10k__________10k_____GND
             |           |           |           |
           Button      Button      Button      Button
-A1 _________|___________|___________|___________|_____10k_____GND
+A1 _________|___________|___________|___________|_____10k_____GND 
+                                                   Pull-Down
 ```
-Note, this does constantly drain power even when not pressed, but at 0.1mA, which is
+Note, this does constantly drain power even when not pressed, but at 0.1mA, which could be changed.
 
 In order to save on IO pins, an analog voltage divider has been used. The values set in the code were tested at 5v USB, thus values many change if a different voltage source is used. Uncomment `#define getAnalogStrength` in order to recalibrate the analogRead values; see under Customization for further details.
 
