@@ -70,8 +70,8 @@ I used an Arduino Uno to upload the sketch with this config as well as a 10uF ca
 ```
             _____
       D10 -|o    |- 5v DC
-          -|     |- D13
-          -|     |- D12 
+       NC -|     |- D13
+       NC -|     |- D12 
       GND -|_____|- D11
 
 ```
