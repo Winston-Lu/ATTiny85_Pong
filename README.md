@@ -5,7 +5,7 @@ A modification of the classic game "Pong" with some additional features to run o
 Wiring of the ATTiny is as follows:
 ```
                _____
- NC (RST)[1] -|o    |- [5]3v-5v DC
+Reset Btn[1] -|o    |- [5]3v-5v DC
 SDA(OLED)[2] -|     |- [6]Button Voltage Divider (A1)
 SCK(OLED)[3] -|     |- [7]LED1 (Shoot)
       GND[4] -|_____|- [8]LED0 (Spike)
