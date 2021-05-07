@@ -1,5 +1,7 @@
 # ATTiny85_Pong
 
+<img src="https://github.com/Winston-Lu/winstonlu.ml/blob/master/img/Projects/card.jpg" width="600px" />
+
 A modification of the classic game "Pong" with some additional features to run on the ATTiny85 using the SSD1306 Library. Running on an ATTiny85-20xx. OLED runs down to 2.2v without much error, and microcontroller can go lower than the rated 2.7v to 2.2v before running into OLED brightness issues.
 
 Wiring of the ATTiny is as follows:
@@ -82,6 +84,10 @@ https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/packa
 
 Library used can be searched for in the library browser under "ssd1306" by Alexey Dynda, which can also be downloaded here:
 https://github.com/lexus2k/ssd1306
+
+
+# Wiring
+<img src="https://github.com/Winston-Lu/winstonlu.ml/blob/master/img/Projects/cardlong.jpg?raw=true" />
 
 
 # Power Usage:
